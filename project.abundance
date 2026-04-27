@@ -46,21 +46,21 @@
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.24615384615384617,
+      "y": 0.6603518267929634,
       "uniqueID": "id-501",
       "name": "Height"
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.3384615384615385,
+      "y": 0.2300405953991881,
       "uniqueID": "id-504",
       "name": "Width"
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.4307692307692308,
+      "y": 0.3274695534506089,
       "uniqueID": "id-510",
       "name": "Thickness"
     },
@@ -134,8 +134,8 @@
     },
     {
       "atomType": "Assembly",
-      "x": 0.556640625,
-      "y": 0.699594046008119,
+      "x": 0.5227864583333333,
+      "y": 0.47496617050067663,
       "uniqueID": "id-564",
       "ioValues": [
         {
@@ -1515,254 +1515,6 @@
           ]
         },
         {
-          "atomType": "Rectangle",
-          "x": 0.16471354166666669,
-          "y": 0.4722598105548038,
-          "uniqueID": "id-1673",
-          "ioValues": [
-            {
-              "name": "x length",
-              "ioValue": 23.5,
-              "currentEquation": "Depth - Thickness"
-            },
-            {
-              "name": "y length",
-              "ioValue": 17.5,
-              "currentEquation": "Width - Thickness"
-            }
-          ]
-        },
-        {
-          "atomType": "Extrude",
-          "x": 0.326171875,
-          "y": 0.516914749661705,
-          "uniqueID": "id-1674",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "height",
-              "ioValue": 0.25,
-              "currentEquation": "Thickness / 2"
-            }
-          ]
-        },
-        {
-          "atomType": "Extrude",
-          "x": 0.33658854166666663,
-          "y": 0.7604871447902571,
-          "uniqueID": "id-1675",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "height",
-              "ioValue": 0.25,
-              "currentEquation": "-.5 * Thickness"
-            }
-          ]
-        },
-        {
-          "atomType": "Fusion",
-          "x": 0.51953125,
-          "y": 0.638700947225981,
-          "uniqueID": "id-1676",
-          "ioValues": [
-            {
-              "name": "Shape 1",
-              "ioValue": {
-                "geometry": "move-extrude-rectangle-23.5-17.5-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.25-0-0-0.25",
-                "dimension": "3D",
-                "plane": {
-                  "origin": [
-                    0,
-                    0,
-                    0
-                  ],
-                  "xDir": [
-                    1,
-                    0,
-                    0
-                  ],
-                  "normal": [
-                    0,
-                    0,
-                    1
-                  ]
-                },
-                "color": "#aad7f2",
-                "tags": [],
-                "bom": []
-              }
-            },
-            {
-              "name": "Shape 2",
-              "ioValue": {
-                "geometry": "extrude-ee085c88-{\"geometry\":\"rectangle-23.5-17.5\",\"dimension\":\"2D\",\"plane\":{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]},\"color\":\"#aad7f2\",\"tags\":[],\"bom\":[]}--0.25-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.25",
-                "dimension": "3D",
-                "plane": {
-                  "origin": [
-                    0,
-                    0,
-                    0
-                  ],
-                  "xDir": [
-                    1,
-                    0,
-                    0
-                  ],
-                  "normal": [
-                    0,
-                    0,
-                    1
-                  ]
-                },
-                "color": "#aad7f2",
-                "tags": [],
-                "bom": []
-              }
-            }
-          ],
-          "unionType": "Fusion"
-        },
-        {
-          "atomType": "Move",
-          "x": 0.3990885416666667,
-          "y": 0.3437077131258457,
-          "uniqueID": "id-1677",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "xDist",
-              "ioValue": 0
-            },
-            {
-              "name": "yDist",
-              "ioValue": 0
-            },
-            {
-              "name": "zDist",
-              "ioValue": 0.25,
-              "currentEquation": "Thickness / 2"
-            }
-          ]
-        },
-        {
-          "atomType": "GitHubMolecule",
-          "x": 0.2506510416666667,
-          "y": 0.7604871447902571,
-          "uniqueID": "id-1678",
-          "name": "Offset_2D",
-          "ioValues": [
-            {
-              "name": "2D_Shape",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "Offset",
-              "ioValue": -0.25,
-              "currentEquation": "-0.5 *  base_thickness"
-            }
-          ],
-          "topLevel": false,
-          "allAtoms": [
-            {
-              "atomType": "Output",
-              "x": 0.98,
-              "y": 0.5,
-              "uniqueID": "id-1679",
-              "ioValues": [
-                {
-                  "name": "number or geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                }
-              ]
-            },
-            {
-              "atomType": "Code",
-              "x": 0.46835443037974683,
-              "y": 0.5654596100278552,
-              "uniqueID": "id-1680",
-              "ioValues": [
-                {
-                  "name": "shape",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "distance",
-                  "ioValue": -0.25
-                }
-              ],
-              "codeVersion": 1,
-              "code": "const Inputs = [\n  { inputName: \"shape\", type: \"geometry\", defaultValue: null },\n  { inputName: \"distance\", type: \"number\", defaultValue: 1 },\n];\n\nreturn await AssemblyMap(library[shape], async (leaf) => {\n  const drawing = leaf.geometry[0];\n  return {\n    ...leaf,\n    geometry: [drawing.offset(distance)]\n  };\n});\n"
-            },
-            {
-              "atomType": "Input",
-              "x": 0.025384615384615384,
-              "y": 0.15384615384615385,
-              "uniqueID": "id-1681",
-              "name": "2D_Shape",
-              "type": "geometry"
-            },
-            {
-              "atomType": "Input",
-              "x": 0.025384615384615384,
-              "y": 0.24615384615384617,
-              "uniqueID": "id-1682",
-              "name": "Offset"
-            }
-          ],
-          "allConnectors": [
-            {
-              "ap2Name": "number or geometry",
-              "ap1ID": "id-1680",
-              "ap2ID": "id-1679"
-            },
-            {
-              "ap2Name": "shape",
-              "ap1ID": "id-1681",
-              "ap2ID": "id-1680"
-            },
-            {
-              "ap2Name": "distance",
-              "ap1ID": "id-1682",
-              "ap2ID": "id-1680"
-            }
-          ],
-          "parentRepo": {
-            "lastFoundGit": "2026-04-27T02:23:39.213Z",
-            "privateRepo": false,
-            "repoName": "Offset_2D",
-            "dateCreated": "2026-03-27T21:44:37Z",
-            "likes": 0,
-            "readMe": "https://raw.githubusercontent.com/BarbourSmith/Offset_2D/master/README.md?sanitize=true",
-            "yyyy": 2026,
-            "topMoleculeID": "id-631",
-            "githubMoleculesUsed": [],
-            "html_url": "https://github.com/BarbourSmith/Offset_2D",
-            "topics": [],
-            "parentRepo": null,
-            "forks": 0,
-            "dateModified": "739702",
-            "ranking": 0.9,
-            "searchField": "offset_2d barboursmith takes an input 2d shape and offsets from it to produce a new 2d shape which is larger or smaller ",
-            "owner": "BarbourSmith",
-            "description": "Takes an input 2D shape and offsets from it to produce a new 2D shape which is larger or smaller",
-            "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Offset_2D/master/project.abundance?sanitize=true",
-            "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Offset_2D/master/project.svg?sanitize=true",
-            "isLocal": false
-          },
-          "unitsKey": "MM",
-          "fileTypeVersion": 1
-        },
-        {
           "atomType": "Input",
           "x": 0.025384615384615384,
           "y": 0.5209742895805142,
@@ -1784,85 +1536,80 @@
           "name": "base_thickness"
         },
         {
-          "atomType": "Equation",
-          "x": 0.19108072916666669,
-          "y": 0.2408660351826793,
-          "uniqueID": "id-1727",
-          "name": "t / 2",
+          "atomType": "Rectangle",
+          "x": 0.14095052083333331,
+          "y": 0.6644113667117727,
+          "uniqueID": "id-1736",
           "ioValues": [
             {
-              "name": "t",
-              "ioValue": 0.5
+              "name": "x length",
+              "ioValue": 23.5
+            },
+            {
+              "name": "y length",
+              "ioValue": 17.5
             }
-          ],
-          "currentEquation": "t / 2"
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.2503255208333333,
+          "y": 0.8362652232746955,
+          "uniqueID": "id-1740",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "height",
+              "ioValue": 0.5,
+              "currentEquation": "base_thickness"
+            }
+          ]
+        },
+        {
+          "atomType": "Rectangle",
+          "x": 0.1909505208333333,
+          "y": 0.6144113667117727,
+          "uniqueID": "id-1744",
+          "ioValues": [
+            {
+              "name": "x length",
+              "ioValue": 23.5
+            },
+            {
+              "name": "y length",
+              "ioValue": 17.5
+            }
+          ]
         }
       ],
       "allConnectors": [
         {
-          "ap2Name": "geometry",
-          "ap1ID": "id-1673",
-          "ap2ID": "id-1674"
-        },
-        {
-          "ap2Name": "2D_Shape",
-          "ap1ID": "id-1673",
-          "ap2ID": "id-1678"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-1674",
-          "ap2ID": "id-1677"
-        },
-        {
-          "ap2Name": "Shape 2",
-          "ap1ID": "id-1675",
-          "ap2ID": "id-1676"
-        },
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1676",
-          "ap2ID": "id-1671"
-        },
-        {
-          "ap2Name": "Shape 1",
-          "ap1ID": "id-1677",
-          "ap2ID": "id-1676"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-1678",
-          "ap2ID": "id-1675"
+          "ap2Name": "y length",
+          "ap1ID": "id-1718",
+          "ap2ID": "id-1736"
         },
         {
           "ap2Name": "y length",
           "ap1ID": "id-1718",
-          "ap2ID": "id-1673"
+          "ap2ID": "id-1744"
         },
         {
           "ap2Name": "x length",
           "ap1ID": "id-1721",
-          "ap2ID": "id-1673"
+          "ap2ID": "id-1736"
         },
         {
-          "ap2Name": "t",
-          "ap1ID": "id-1724",
-          "ap2ID": "id-1727"
+          "ap2Name": "x length",
+          "ap1ID": "id-1721",
+          "ap2ID": "id-1744"
         },
         {
-          "ap2Name": "height",
-          "ap1ID": "id-1727",
-          "ap2ID": "id-1674"
-        },
-        {
-          "ap2Name": "zDist",
-          "ap1ID": "id-1727",
-          "ap2ID": "id-1677"
-        },
-        {
-          "ap2Name": "height",
-          "ap1ID": "id-1727",
-          "ap2ID": "id-1675"
+          "ap2Name": "geometry",
+          "ap1ID": "id-1736",
+          "ap2ID": "id-1740"
         }
       ],
       "fileTypeVersion": 1
