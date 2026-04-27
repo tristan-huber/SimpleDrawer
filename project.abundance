@@ -145,6 +145,10 @@
         {
           "name": "Shape 8",
           "ioValue": null
+        },
+        {
+          "name": "Shape 10",
+          "ioValue": null
         }
       ]
     },
@@ -1478,20 +1482,22 @@
       "x": 0.2965494791666667,
       "y": 0.15290933694181325,
       "uniqueID": "id-1669",
-      "name": "New Molecule",
+      "name": "Drawer Base",
       "ioValues": [
         {
           "name": "base_width",
-          "ioValue": 10
+          "ioValue": 17.5,
+          "currentEquation": "Width - Thickness"
         },
         {
           "name": "base_depth",
-          "ioValue": 10
+          "ioValue": 23.5,
+          "currentEquation": "Depth - Thickness"
         },
         {
           "name": "base_thickness",
           "ioValue": 0.5,
-          "currentEquation": "0.5"
+          "currentEquation": "Thickness"
         }
       ],
       "topLevel": false,
@@ -1516,12 +1522,12 @@
           "ioValues": [
             {
               "name": "x length",
-              "ioValue": 10,
+              "ioValue": 23.5,
               "currentEquation": "Depth - Thickness"
             },
             {
               "name": "y length",
-              "ioValue": 10,
+              "ioValue": 17.5,
               "currentEquation": "Width - Thickness"
             }
           ]
@@ -1569,7 +1575,7 @@
             {
               "name": "Shape 1",
               "ioValue": {
-                "geometry": "move-extrude-rectangle-10-10-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.25-0-0-0.25",
+                "geometry": "move-extrude-rectangle-23.5-17.5-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.25-0-0-0.25",
                 "dimension": "3D",
                 "plane": {
                   "origin": [
@@ -1596,7 +1602,7 @@
             {
               "name": "Shape 2",
               "ioValue": {
-                "geometry": "extrude-ee085c88-{\"geometry\":\"rectangle-10-10\",\"dimension\":\"2D\",\"plane\":{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]},\"color\":\"#aad7f2\",\"tags\":[],\"bom\":[]}--0.25-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.25",
+                "geometry": "extrude-ee085c88-{\"geometry\":\"rectangle-23.5-17.5\",\"dimension\":\"2D\",\"plane\":{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]},\"color\":\"#aad7f2\",\"tags\":[],\"bom\":[]}--0.25-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.25",
                 "dimension": "3D",
                 "plane": {
                   "origin": [
@@ -1759,7 +1765,7 @@
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.3382949932341001,
+          "y": 0.5209742895805142,
           "uniqueID": "id-1718",
           "name": "base_width"
         },
@@ -1977,6 +1983,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-1165",
       "ap2ID": "id-889"
+    },
+    {
+      "ap2Name": "Shape 10",
+      "ap1ID": "id-1669",
+      "ap2ID": "id-564"
     }
   ],
   "unitsKey": "Inches",
