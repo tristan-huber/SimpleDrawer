@@ -591,55 +591,12 @@
           "ioValue": 4
         }
       ],
-      "placements": [
-        [
-          {
-            "id": 1,
-            "rotate": 0,
-            "translate": {
-              "x": 11.9,
-              "y": 1.65
-            }
-          },
-          {
-            "id": 0,
-            "rotate": 180,
-            "translate": {
-              "x": 11.9,
-              "y": 4.949999999999999
-            }
-          },
-          {
-            "id": 2,
-            "rotate": 0,
-            "translate": {
-              "x": 1.65,
-              "y": 16
-            }
-          },
-          {
-            "id": 4,
-            "rotate": 90,
-            "translate": {
-              "x": 12.449999999999996,
-              "y": 18.75
-            }
-          },
-          {
-            "id": 3,
-            "rotate": 270,
-            "translate": {
-              "x": 9.400000024949238,
-              "y": 32.55
-            }
-          }
-        ]
-      ]
+      "placements": []
     },
     {
       "atomType": "Tag",
-      "x": 0.5999348958333334,
-      "y": 0.26928281461434367,
+      "x": 0.6500651041666666,
+      "y": 0.7848443843031123,
       "uniqueID": "id-732",
       "name": "plywood",
       "ioValues": [
@@ -654,14 +611,15 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.67578125,
-      "y": 0.47902571041948583,
+      "x": 0.591796875,
+      "y": 0.23951285520974291,
       "uniqueID": "id-768",
       "name": "Drawer_Slide",
       "ioValues": [
         {
           "name": "Length",
-          "ioValue": 20
+          "ioValue": 24,
+          "currentEquation": "Depth"
         }
       ],
       "topLevel": false,
@@ -693,7 +651,7 @@
           "ioValues": [
             {
               "name": "x length",
-              "ioValue": 20
+              "ioValue": 24
             },
             {
               "name": "y length",
@@ -753,7 +711,7 @@
             },
             {
               "name": "xDist",
-              "ioValue": -8.620000000000001,
+              "ioValue": -10.620000000000001,
               "currentEquation": "-1 * Length / 2 + 1.38"
             },
             {
@@ -875,7 +833,7 @@
           "ioValues": [
             {
               "name": "x length",
-              "ioValue": 20
+              "ioValue": 24
             },
             {
               "name": "y length",
@@ -1014,7 +972,7 @@
             },
             {
               "name": "Item Name",
-              "ioValue": "Drawer Slide 20 inches",
+              "ioValue": "Drawer Slide 24 inches",
               "currentEquation": "New Item"
             },
             {
@@ -1023,7 +981,7 @@
             },
             {
               "name": "Cost (USD)",
-              "ioValue": 170
+              "ioValue": 230
             },
             {
               "name": "Source Link",
@@ -1032,9 +990,9 @@
             }
           ],
           "BOMitem": {
-            "BOMitemName": "Drawer Slide 20 inches",
+            "BOMitemName": "Drawer Slide 24 inches",
             "numberNeeded": 0.5,
-            "costUSD": 170,
+            "costUSD": 230,
             "source": "https://www.mcmaster.com/11435A14/"
           }
         },
@@ -1047,7 +1005,7 @@
           "ioValues": [
             {
               "name": "l",
-              "ioValue": 20
+              "ioValue": 24
             }
           ],
           "currentEquation": "\"Drawer Slide \" + l + \" inches\""
@@ -1061,7 +1019,7 @@
           "ioValues": [
             {
               "name": "l",
-              "ioValue": 20
+              "ioValue": 24
             }
           ],
           "currentEquation": "(l - 10) * 15 + 20"
@@ -1570,6 +1528,92 @@
       },
       "unitsKey": "Inches",
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Move",
+      "x": 0.6728515625,
+      "y": 0.19215155615696888,
+      "uniqueID": "id-883",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0,
+          "currentEquation": "0"
+        },
+        {
+          "name": "yDist",
+          "ioValue": -9.25,
+          "currentEquation": "-0.5 * Width - 0.25"
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.6673177083333334,
+      "y": 0.36400541271989173,
+      "uniqueID": "id-889",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 9.25,
+          "currentEquation": "0.5 * Width + 0.25"
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.7532552083333334,
+      "y": 0.28416779431664413,
+      "uniqueID": "id-895",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 3",
+          "ioValue": null
+        }
+      ]
+    },
+    {
+      "atomType": "ExtractTag",
+      "x": 0.798828125,
+      "y": 0.6779431664411367,
+      "uniqueID": "id-901",
+      "name": "Extract Tag",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "tag": "plywood",
+      "tagIndex": 0
     }
   ],
   "allConnectors": [
@@ -1597,11 +1641,6 @@
       "ap2Name": "number or geometry",
       "ap1ID": "id-564",
       "ap2ID": "id-496"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-564",
-      "ap2ID": "id-724"
     },
     {
       "ap2Name": "geometry",
@@ -1687,6 +1726,41 @@
       "ap2Name": "Shape 6",
       "ap1ID": "id-720",
       "ap2ID": "id-564"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-732",
+      "ap2ID": "id-895"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-768",
+      "ap2ID": "id-883"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-768",
+      "ap2ID": "id-889"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-883",
+      "ap2ID": "id-895"
+    },
+    {
+      "ap2Name": "Shape 3",
+      "ap1ID": "id-889",
+      "ap2ID": "id-895"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-895",
+      "ap2ID": "id-901"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-901",
+      "ap2ID": "id-724"
     }
   ],
   "unitsKey": "Inches",
