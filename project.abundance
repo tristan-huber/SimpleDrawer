@@ -1,13 +1,341 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-495",
-    "name": "SimpleDrawer",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "Inches",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-495",
+  "name": "SimpleDrawer",
+  "ioValues": [
+    {
+      "name": "Depth",
+      "ioValue": 24,
+      "currentEquation": "24"
+    },
+    {
+      "name": "Height",
+      "ioValue": 2.5
+    },
+    {
+      "name": "Width",
+      "ioValue": 18
+    },
+    {
+      "name": "Thickness",
+      "ioValue": 0.5,
+      "currentEquation": "0.5"
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "id-496",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.22462787550744248,
+      "uniqueID": "id-498",
+      "name": "Depth"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.31693556781513477,
+      "uniqueID": "id-501",
+      "name": "Height"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.4092432601228271,
+      "uniqueID": "id-504",
+      "name": "Width"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.5938586447382117,
+      "uniqueID": "id-510",
+      "name": "Thickness"
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.16861979166666669,
+      "y": 0.22462787550744248,
+      "uniqueID": "id-513",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 23.5,
+          "currentEquation": "Depth - Thickness"
+        },
+        {
+          "name": "y length",
+          "ioValue": 17.5,
+          "currentEquation": "Width - Thickness"
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.349609375,
+      "y": 0.20433017591339647,
+      "uniqueID": "id-517",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 0.25,
+          "currentEquation": "Thickness / 2"
+        }
+      ]
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.25358072916666663,
+      "y": 0.38836265223274696,
+      "uniqueID": "id-526",
+      "name": "Offset_2D",
+      "ioValues": [
+        {
+          "name": "2D_Shape",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Offset",
+          "ioValue": -0.25,
+          "currentEquation": "-0.5 * Thickness"
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-522",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Code",
+          "x": 0.46835443037974683,
+          "y": 0.5654596100278552,
+          "uniqueID": "id-523",
+          "ioValues": [
+            {
+              "name": "shape",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "distance",
+              "ioValue": -0.25
+            }
+          ],
+          "codeVersion": 1,
+          "code": "const Inputs = [\n  { inputName: \"shape\", type: \"geometry\", defaultValue: null },\n  { inputName: \"distance\", type: \"number\", defaultValue: 1 },\n];\n\nreturn await AssemblyMap(library[shape], async (leaf) => {\n  const drawing = leaf.geometry[0];\n  return {\n    ...leaf,\n    geometry: [drawing.offset(distance)]\n  };\n});\n"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-524",
+          "name": "2D_Shape",
+          "type": "geometry"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.24615384615384617,
+          "uniqueID": "id-525",
+          "name": "Offset"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-523",
+          "ap2ID": "id-522"
+        },
+        {
+          "ap2Name": "shape",
+          "ap1ID": "id-524",
+          "ap2ID": "id-523"
+        },
+        {
+          "ap2Name": "distance",
+          "ap1ID": "id-525",
+          "ap2ID": "id-523"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2026-04-27T02:23:39.213Z",
+        "privateRepo": false,
+        "repoName": "Offset_2D",
+        "dateCreated": "2026-03-27T21:44:37Z",
+        "likes": 0,
+        "readMe": "https://raw.githubusercontent.com/BarbourSmith/Offset_2D/master/README.md?sanitize=true",
+        "yyyy": 2026,
+        "topMoleculeID": "id-631",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/BarbourSmith/Offset_2D",
+        "topics": [],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739702",
+        "ranking": 0.9,
+        "searchField": "offset_2d barboursmith takes an input 2d shape and offsets from it to produce a new 2d shape which is larger or smaller ",
+        "owner": "BarbourSmith",
+        "description": "Takes an input 2D shape and offsets from it to produce a new 2D shape which is larger or smaller",
+        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Offset_2D/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Offset_2D/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "MM",
+      "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.3313802083333333,
+      "y": 0.43843031123139375,
+      "uniqueID": "id-538",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": -0.25,
+          "currentEquation": "-.5 * Thickness"
+        }
+      ]
+    },
+    {
+      "atomType": "Fusion",
+      "x": 0.41861979166666663,
+      "y": 0.21650879566982406,
+      "uniqueID": "id-542",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": {
+            "geometry": "extrude-rectangle-23.5-17.5-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-0.25",
+            "dimension": "3D",
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "tags": [],
+            "bom": []
+          }
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": {
+            "geometry": "extrude-ee085c88-{\"geometry\":\"rectangle-23.5-17.5\",\"dimension\":\"2D\",\"plane\":{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]},\"color\":\"#aad7f2\",\"tags\":[],\"bom\":[]}--0.25-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--0.25",
+            "dimension": "3D",
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "tags": [],
+            "bom": []
+          }
+        }
+      ],
+      "unionType": "Fusion"
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.17415364583333334,
+      "y": 0.611637347767253,
+      "uniqueID": "id-547",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 24,
+          "currentEquation": "Depth"
+        },
+        {
+          "name": "y length",
+          "ioValue": 0.5,
+          "currentEquation": "Thickness"
+        }
+      ]
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-513",
+      "ap2ID": "id-517"
+    },
+    {
+      "ap2Name": "2D_Shape",
+      "ap1ID": "id-513",
+      "ap2ID": "id-526"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-517",
+      "ap2ID": "id-542"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-526",
+      "ap2ID": "id-538"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-538",
+      "ap2ID": "id-542"
+    }
+  ],
+  "unitsKey": "Inches",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
