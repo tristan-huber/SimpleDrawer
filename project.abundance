@@ -1702,11 +1702,13 @@
         },
         {
           "name": "Tool Size",
-          "ioValue": 0.25
+          "ioValue": 0.249,
+          "currentEquation": "0.249"
         },
         {
           "name": "Passes",
-          "ioValue": 1
+          "ioValue": 1,
+          "currentEquation": "1"
         },
         {
           "name": "Speed",
@@ -1723,7 +1725,7 @@
         }
       ],
       "partName": "SimpleDrawer",
-      "sortDirection": "Left"
+      "sortDirection": "Bottom"
     }
   ],
   "allConnectors": [
