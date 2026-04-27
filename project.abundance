@@ -7,13 +7,11 @@
   "ioValues": [
     {
       "name": "Depth",
-      "ioValue": 24,
-      "currentEquation": "24"
+      "ioValue": 24
     },
     {
       "name": "Height",
-      "ioValue": 2.5,
-      "currentEquation": "2.5"
+      "ioValue": 2.5
     },
     {
       "name": "Width",
@@ -21,8 +19,7 @@
     },
     {
       "name": "Thickness",
-      "ioValue": 0.5,
-      "currentEquation": "0.5"
+      "ioValue": 0.5
     }
   ],
   "topLevel": true,
@@ -42,28 +39,28 @@
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.22462787550744248,
+      "y": 0.15384615384615385,
       "uniqueID": "id-498",
       "name": "Depth"
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.31693556781513477,
+      "y": 0.24615384615384617,
       "uniqueID": "id-501",
       "name": "Height"
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.4092432601228271,
+      "y": 0.3384615384615385,
       "uniqueID": "id-504",
       "name": "Width"
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.5938586447382117,
+      "y": 0.4307692307692308,
       "uniqueID": "id-510",
       "name": "Thickness"
     },
@@ -315,8 +312,7 @@
         },
         {
           "name": "xDist",
-          "ioValue": 0,
-          "currentEquation": "0"
+          "ioValue": 0
         },
         {
           "name": "yDist",
@@ -327,6 +323,204 @@
           "ioValue": 0.25,
           "currentEquation": "Thickness / 2"
         }
+      ]
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.14420572916666666,
+      "y": 0.7916102841677943,
+      "uniqueID": "id-675",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 18,
+          "currentEquation": "Width"
+        },
+        {
+          "name": "y length",
+          "ioValue": 0.5,
+          "currentEquation": "Thickness"
+        }
+      ]
+    },
+    {
+      "atomType": "Rotate",
+      "x": 0.19986979166666669,
+      "y": 0.7956698240866035,
+      "uniqueID": "id-679",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "x-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "z-axis degrees",
+          "ioValue": 90
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.2897135416666667,
+      "y": 0.7577807848443843,
+      "uniqueID": "id-685",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": -11.75,
+          "currentEquation": "-0.5 * (Depth - Thickness)"
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.283203125,
+      "y": 0.9012178619756428,
+      "uniqueID": "id-708",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 11.75,
+          "currentEquation": "0.5 * (Depth - Thickness)"
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.3645833333333333,
+      "y": 0.8213802435723951,
+      "uniqueID": "id-714",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.4684244791666667,
+      "y": 0.8132611637347767,
+      "uniqueID": "id-720",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 2.5,
+          "currentEquation": "Height"
+        }
+      ]
+    },
+    {
+      "atomType": "CutLayout",
+      "x": 0.7477213541666666,
+      "y": 0.8538565629228687,
+      "uniqueID": "id-724",
+      "name": "Cut Layout",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Sheet Width",
+          "ioValue": 96
+        },
+        {
+          "name": "Sheet Height",
+          "ioValue": 48
+        },
+        {
+          "name": "Part Padding",
+          "ioValue": 0.4
+        },
+        {
+          "name": "Orientations",
+          "ioValue": 4
+        }
+      ],
+      "placements": [
+        [
+          {
+            "id": 2,
+            "rotate": 270,
+            "translate": {
+              "x": 9.4,
+              "y": 1.6500000000000028
+            }
+          },
+          {
+            "id": 1,
+            "rotate": 0,
+            "translate": {
+              "x": 11.9,
+              "y": 4.949999999999999
+            }
+          },
+          {
+            "id": 0,
+            "rotate": 0,
+            "translate": {
+              "x": 11.9,
+              "y": 8.25
+            }
+          },
+          {
+            "id": 3,
+            "rotate": 270,
+            "translate": {
+              "x": 9.400000024949238,
+              "y": 11.549999999999997
+            }
+          },
+          {
+            "id": 4,
+            "rotate": 270,
+            "translate": {
+              "x": 9.15000002494924,
+              "y": 25.349999999999998
+            }
+          }
+        ]
       ]
     },
     {
@@ -436,1184 +630,6 @@
       },
       "unitsKey": "MM",
       "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Rectangle",
-      "x": 0.14420572916666666,
-      "y": 0.7916102841677943,
-      "uniqueID": "id-675",
-      "ioValues": [
-        {
-          "name": "x length",
-          "ioValue": 18,
-          "currentEquation": "Width"
-        },
-        {
-          "name": "y length",
-          "ioValue": 0.5,
-          "currentEquation": "Thickness"
-        }
-      ]
-    },
-    {
-      "atomType": "Rotate",
-      "x": 0.19986979166666669,
-      "y": 0.7956698240866035,
-      "uniqueID": "id-679",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "x-axis degrees",
-          "ioValue": 0
-        },
-        {
-          "name": "y-axis degrees",
-          "ioValue": 0
-        },
-        {
-          "name": "z-axis degrees",
-          "ioValue": 90,
-          "currentEquation": "90"
-        }
-      ]
-    },
-    {
-      "atomType": "Move",
-      "x": 0.2897135416666667,
-      "y": 0.7577807848443843,
-      "uniqueID": "id-685",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "xDist",
-          "ioValue": -11.75,
-          "currentEquation": "-0.5 * (Depth - Thickness)"
-        },
-        {
-          "name": "yDist",
-          "ioValue": 0
-        },
-        {
-          "name": "zDist",
-          "ioValue": 0
-        }
-      ]
-    },
-    {
-      "atomType": "Move",
-      "x": 0.283203125,
-      "y": 0.9012178619756428,
-      "uniqueID": "id-708",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "xDist",
-          "ioValue": 11.75,
-          "currentEquation": "0.5 * (Depth - Thickness)"
-        },
-        {
-          "name": "yDist",
-          "ioValue": 0
-        },
-        {
-          "name": "zDist",
-          "ioValue": 0
-        }
-      ]
-    },
-    {
-      "atomType": "Assembly",
-      "x": 0.3645833333333333,
-      "y": 0.8213802435723951,
-      "uniqueID": "id-714",
-      "ioValues": [
-        {
-          "name": "Shape 1",
-          "ioValue": null
-        },
-        {
-          "name": "Shape 2",
-          "ioValue": null
-        }
-      ]
-    },
-    {
-      "atomType": "Extrude",
-      "x": 0.4684244791666667,
-      "y": 0.8132611637347767,
-      "uniqueID": "id-720",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "height",
-          "ioValue": 2.5,
-          "currentEquation": "Height"
-        }
-      ]
-    },
-    {
-      "atomType": "CutLayout",
-      "x": 0.892578125,
-      "y": 0.8267929634641408,
-      "uniqueID": "id-724",
-      "name": "Cut Layout",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Sheet Width",
-          "ioValue": 96
-        },
-        {
-          "name": "Sheet Height",
-          "ioValue": 48
-        },
-        {
-          "name": "Part Padding",
-          "ioValue": 0.4
-        },
-        {
-          "name": "Orientations",
-          "ioValue": 4
-        }
-      ],
-      "placements": []
-    },
-    {
-      "atomType": "Tag",
-      "x": 0.6500651041666666,
-      "y": 0.7848443843031123,
-      "uniqueID": "id-732",
-      "name": "plywood",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ],
-      "tags": [
-        "plywood"
-      ]
-    },
-    {
-      "atomType": "GitHubMolecule",
-      "x": 0.591796875,
-      "y": 0.23951285520974291,
-      "uniqueID": "id-768",
-      "name": "Drawer_Slide",
-      "ioValues": [
-        {
-          "name": "Length",
-          "ioValue": 24,
-          "currentEquation": "Depth"
-        }
-      ],
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 0.98,
-          "y": 0.5,
-          "uniqueID": "id-736",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.15384615384615385,
-          "uniqueID": "id-737",
-          "name": "Length"
-        },
-        {
-          "atomType": "Rectangle",
-          "x": 0.23990885416666669,
-          "y": 0.12584573748308525,
-          "uniqueID": "id-738",
-          "ioValues": [
-            {
-              "name": "x length",
-              "ioValue": 24
-            },
-            {
-              "name": "y length",
-              "ioValue": 0.5
-            }
-          ]
-        },
-        {
-          "atomType": "Extrude",
-          "x": 0.40559895833333337,
-          "y": 0.2070365358592693,
-          "uniqueID": "id-739",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "height",
-              "ioValue": 1.79
-            }
-          ]
-        },
-        {
-          "atomType": "Rotate",
-          "x": 0.21451822916666666,
-          "y": 0.6535859269282814,
-          "uniqueID": "id-751",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "x-axis degrees",
-              "ioValue": 90
-            },
-            {
-              "name": "y-axis degrees",
-              "ioValue": 0
-            },
-            {
-              "name": "z-axis degrees",
-              "ioValue": 0
-            }
-          ]
-        },
-        {
-          "atomType": "Move",
-          "x": 0.30013020833333337,
-          "y": 0.5669824086603518,
-          "uniqueID": "id-752",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "xDist",
-              "ioValue": -10.620000000000001,
-              "currentEquation": "-1 * Length / 2 + 1.38"
-            },
-            {
-              "name": "yDist",
-              "ioValue": 0
-            },
-            {
-              "name": "zDist",
-              "ioValue": 0.895,
-              "currentEquation": "Height / 2"
-            }
-          ]
-        },
-        {
-          "atomType": "Constant",
-          "x": 0.08203125,
-          "y": 0.37077131258457374,
-          "uniqueID": "id-753",
-          "name": "Height",
-          "value": 1.79
-        },
-        {
-          "atomType": "Move",
-          "x": 0.36197916666666663,
-          "y": 0.523680649526387,
-          "uniqueID": "id-754",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "xDist",
-              "ioValue": 5.04
-            },
-            {
-              "name": "yDist",
-              "ioValue": 0
-            },
-            {
-              "name": "zDist",
-              "ioValue": 0
-            }
-          ]
-        },
-        {
-          "atomType": "Move",
-          "x": 0.36295572916666663,
-          "y": 0.6738836265223275,
-          "uniqueID": "id-755",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "xDist",
-              "ioValue": 8.82
-            },
-            {
-              "name": "yDist",
-              "ioValue": 0
-            },
-            {
-              "name": "zDist",
-              "ioValue": 0
-            }
-          ]
-        },
-        {
-          "atomType": "Move",
-          "x": 0.3642578125,
-          "y": 0.8525033829499323,
-          "uniqueID": "id-756",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "xDist",
-              "ioValue": 13.86
-            },
-            {
-              "name": "yDist",
-              "ioValue": 0
-            },
-            {
-              "name": "zDist",
-              "ioValue": 0
-            }
-          ]
-        },
-        {
-          "atomType": "Assembly",
-          "x": 0.7223307291666666,
-          "y": 0.4817320703653586,
-          "uniqueID": "id-757",
-          "ioValues": [
-            {
-              "name": "Shape 1",
-              "ioValue": null
-            },
-            {
-              "name": "Shape 7",
-              "ioValue": null
-            },
-            {
-              "name": "Shape 8",
-              "ioValue": null
-            }
-          ]
-        },
-        {
-          "atomType": "Rectangle",
-          "x": 0.24934895833333337,
-          "y": 0.4032476319350473,
-          "uniqueID": "id-758",
-          "ioValues": [
-            {
-              "name": "x length",
-              "ioValue": 24
-            },
-            {
-              "name": "y length",
-              "ioValue": 3
-            }
-          ]
-        },
-        {
-          "atomType": "Extrude",
-          "x": 0.3567708333333333,
-          "y": 0.3694181326116373,
-          "uniqueID": "id-759",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "height",
-              "ioValue": 1.79
-            }
-          ]
-        },
-        {
-          "atomType": "Intersection",
-          "x": 0.5091145833333334,
-          "y": 0.6441136671177267,
-          "uniqueID": "id-760",
-          "ioValues": [
-            {
-              "name": "geometry1",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "geometry2",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Assembly",
-          "x": 0.4654947916666667,
-          "y": 0.7929634641407307,
-          "uniqueID": "id-761",
-          "ioValues": [
-            {
-              "name": "Shape 1",
-              "ioValue": null
-            },
-            {
-              "name": "Shape 2",
-              "ioValue": null
-            },
-            {
-              "name": "Shape 3",
-              "ioValue": null
-            },
-            {
-              "name": "Shape 4",
-              "ioValue": null
-            }
-          ]
-        },
-        {
-          "atomType": "Color",
-          "x": 0.5696614583333334,
-          "y": 0.645466847090663,
-          "uniqueID": "id-762",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ],
-          "selectedColor": "Keep Out"
-        },
-        {
-          "atomType": "Rotate",
-          "x": 0.611328125,
-          "y": 0.8443843031123139,
-          "uniqueID": "id-763",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "x-axis degrees",
-              "ioValue": 180
-            },
-            {
-              "name": "y-axis degrees",
-              "ioValue": 0
-            },
-            {
-              "name": "z-axis degrees",
-              "ioValue": 0
-            }
-          ]
-        },
-        {
-          "atomType": "Move",
-          "x": 0.6962890625,
-          "y": 0.8146143437077131,
-          "uniqueID": "id-764",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "xDist",
-              "ioValue": 0
-            },
-            {
-              "name": "yDist",
-              "ioValue": 0
-            },
-            {
-              "name": "zDist",
-              "ioValue": 1.79,
-              "currentEquation": "Height"
-            }
-          ]
-        },
-        {
-          "atomType": "Add-BOM-Tag",
-          "x": 0.8466796875,
-          "y": 0.3085250338294993,
-          "uniqueID": "id-765",
-          "name": "Add BOM Tag",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "Item Name",
-              "ioValue": "Drawer Slide 24 inches",
-              "currentEquation": "New Item"
-            },
-            {
-              "name": "Number Needed",
-              "ioValue": 0.5
-            },
-            {
-              "name": "Cost (USD)",
-              "ioValue": 230
-            },
-            {
-              "name": "Source Link",
-              "ioValue": "https://www.mcmaster.com/11435A14/",
-              "currentEquation": "https://www.mcmaster.com/11435A14/"
-            }
-          ],
-          "BOMitem": {
-            "BOMitemName": "Drawer Slide 24 inches",
-            "numberNeeded": 0.5,
-            "costUSD": 230,
-            "source": "https://www.mcmaster.com/11435A14/"
-          }
-        },
-        {
-          "atomType": "Equation",
-          "x": 0.7275390625,
-          "y": 0.12313937753721245,
-          "uniqueID": "id-766",
-          "name": "\"Drawer Slide \" + l + \" inches\"",
-          "ioValues": [
-            {
-              "name": "l",
-              "ioValue": 24
-            }
-          ],
-          "currentEquation": "\"Drawer Slide \" + l + \" inches\""
-        },
-        {
-          "atomType": "Equation",
-          "x": 0.6927083333333334,
-          "y": 0.3044654939106901,
-          "uniqueID": "id-767",
-          "name": "(l - 10) * 15 + 20",
-          "ioValues": [
-            {
-              "name": "l",
-              "ioValue": 24
-            }
-          ],
-          "currentEquation": "(l - 10) * 15 + 20"
-        },
-        {
-          "atomType": "GitHubMolecule",
-          "x": 0.12337239583333333,
-          "y": 0.5940460081190798,
-          "uniqueID": "id-740",
-          "name": "-6-Wood-Screw-inches",
-          "ioValues": [
-            {
-              "name": "Length",
-              "ioValue": 0.5
-            }
-          ],
-          "topLevel": false,
-          "allAtoms": [
-            {
-              "atomType": "Output",
-              "x": 0.98,
-              "y": 0.5,
-              "uniqueID": "id-741",
-              "ioValues": [
-                {
-                  "name": "number or geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                }
-              ]
-            },
-            {
-              "atomType": "Circle",
-              "x": 0.20153714773697695,
-              "y": 0.6987577639751553,
-              "uniqueID": "id-742",
-              "ioValues": [
-                {
-                  "name": "diameter",
-                  "ioValue": 0.15625,
-                  "currentEquation": "5/32"
-                }
-              ]
-            },
-            {
-              "atomType": "Circle",
-              "x": 0.1861656703672075,
-              "y": 0.38819875776397517,
-              "uniqueID": "id-743",
-              "ioValues": [
-                {
-                  "name": "diameter",
-                  "ioValue": 0.28125,
-                  "currentEquation": "9/32"
-                }
-              ]
-            },
-            {
-              "atomType": "Move",
-              "x": 0.3432963279248506,
-              "y": 0.7018633540372671,
-              "uniqueID": "id-744",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "xDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": -0.1
-                }
-              ]
-            },
-            {
-              "atomType": "Loft",
-              "x": 0.4227156276686593,
-              "y": 0.2857142857142857,
-              "uniqueID": "id-745",
-              "ioValues": [
-                {
-                  "name": "Shape 1",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 2",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 3",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 1",
-                  "ioValue": {
-                    "geometry": "move-circle-0.078125-0-0-0",
-                    "dimension": "2D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        -0.1
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
-                },
-                {
-                  "name": "Shape 2",
-                  "ioValue": {
-                    "geometry": "circle-0.140625",
-                    "dimension": "2D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
-                },
-                {
-                  "name": "Shape 3",
-                  "ioValue": ""
-                }
-              ],
-              "closedSelection": 0
-            },
-            {
-              "atomType": "Extrude",
-              "x": 0.49274124679760883,
-              "y": 0.6583850931677019,
-              "uniqueID": "id-746",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "height",
-                  "ioValue": -0.5,
-                  "currentEquation": "-Length"
-                }
-              ]
-            },
-            {
-              "atomType": "Assembly",
-              "x": 0.6147426981919333,
-              "y": 0.3385093167701863,
-              "uniqueID": "id-747",
-              "name": "Fusion",
-              "ioValues": [
-                {
-                  "name": "Shape 1",
-                  "ioValue": null
-                },
-                {
-                  "name": "Shape 2",
-                  "ioValue": null
-                }
-              ],
-              "unionType": "Assembly",
-              "unionIndex": 1
-            },
-            {
-              "atomType": "Add-BOM-Tag",
-              "x": 0.7143894107600341,
-              "y": 0.2605590062111801,
-              "uniqueID": "id-748",
-              "name": "Add BOM Tag",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Item Name",
-                  "ioValue": "#6 Screw",
-                  "currentEquation": "#6 Screw"
-                },
-                {
-                  "name": "Number Needed",
-                  "ioValue": 1
-                },
-                {
-                  "name": "Cost (USD)",
-                  "ioValue": 0
-                },
-                {
-                  "name": "Source Link",
-                  "ioValue": ""
-                }
-              ],
-              "BOMitem": {
-                "BOMitemName": "#6 Screw",
-                "numberNeeded": 1,
-                "costUSD": 0,
-                "source": ""
-              }
-            },
-            {
-              "atomType": "Color",
-              "x": 0.819193324061196,
-              "y": 0.40062111801242234,
-              "uniqueID": "id-749",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                }
-              ],
-              "selectedColor": "Mauve "
-            },
-            {
-              "atomType": "Input",
-              "x": 0.025384615384615384,
-              "y": 0.15384615384615385,
-              "uniqueID": "id-750",
-              "name": "Length"
-            }
-          ],
-          "allConnectors": [
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-742",
-              "ap2ID": "id-744"
-            },
-            {
-              "ap2Name": "Shape 2",
-              "ap1ID": "id-743",
-              "ap2ID": "id-745"
-            },
-            {
-              "ap2Name": "Shape 1",
-              "ap1ID": "id-744",
-              "ap2ID": "id-745"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-744",
-              "ap2ID": "id-746"
-            },
-            {
-              "ap2Name": "Shape 2",
-              "ap1ID": "id-745",
-              "ap2ID": "id-747"
-            },
-            {
-              "ap2Name": "Shape 1",
-              "ap1ID": "id-746",
-              "ap2ID": "id-747"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-747",
-              "ap2ID": "id-748"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-748",
-              "ap2ID": "id-749"
-            },
-            {
-              "ap2Name": "number or geometry",
-              "ap1ID": "id-749",
-              "ap2ID": "id-741"
-            }
-          ],
-          "parentRepo": {
-            "lastFoundGit": "2026-04-27T02:23:39.213Z",
-            "privateRepo": false,
-            "repoName": "-6-Wood-Screw-inches",
-            "dateCreated": "2025-06-27T21:18:08Z",
-            "likes": 0,
-            "readMe": "https://raw.githubusercontent.com/alzatin/-6-Wood-Screw-inches/master/README.md?sanitize=true",
-            "yyyy": 2025,
-            "topMoleculeID": "cf7ebb22-6d20-4eac-82e3-ec22eee90a58",
-            "githubMoleculesUsed": [],
-            "html_url": "https://github.com/alzatin/-6-Wood-Screw-inches",
-            "topics": [
-              "hardware",
-              "wood",
-              "screw"
-            ],
-            "parentRepo": null,
-            "forks": 0,
-            "dateModified": "739713",
-            "ranking": 1.5,
-            "searchField": "-6-wood-screw-inches alzatin  hardware wood screw",
-            "owner": "alzatin",
-            "description": "",
-            "contentURL": "https://raw.githubusercontent.com/alzatin/-6-Wood-Screw-inches/master/project.abundance?sanitize=true",
-            "svgURL": "https://raw.githubusercontent.com/alzatin/-6-Wood-Screw-inches/master/project.svg?sanitize=true",
-            "isLocal": false
-          },
-          "unitsKey": "Inches",
-          "fileTypeVersion": 1
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "x length",
-          "ap1ID": "id-737",
-          "ap2ID": "id-738"
-        },
-        {
-          "ap2Name": "x length",
-          "ap1ID": "id-737",
-          "ap2ID": "id-758"
-        },
-        {
-          "ap2Name": "l",
-          "ap1ID": "id-737",
-          "ap2ID": "id-766"
-        },
-        {
-          "ap2Name": "l",
-          "ap1ID": "id-737",
-          "ap2ID": "id-767"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-738",
-          "ap2ID": "id-739"
-        },
-        {
-          "ap2Name": "Shape 1",
-          "ap1ID": "id-739",
-          "ap2ID": "id-757"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-751",
-          "ap2ID": "id-752"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-752",
-          "ap2ID": "id-754"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-752",
-          "ap2ID": "id-755"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-752",
-          "ap2ID": "id-756"
-        },
-        {
-          "ap2Name": "Shape 1",
-          "ap1ID": "id-752",
-          "ap2ID": "id-761"
-        },
-        {
-          "ap2Name": "height",
-          "ap1ID": "id-753",
-          "ap2ID": "id-739"
-        },
-        {
-          "ap2Name": "height",
-          "ap1ID": "id-753",
-          "ap2ID": "id-759"
-        },
-        {
-          "ap2Name": "Shape 2",
-          "ap1ID": "id-754",
-          "ap2ID": "id-761"
-        },
-        {
-          "ap2Name": "Shape 3",
-          "ap1ID": "id-755",
-          "ap2ID": "id-761"
-        },
-        {
-          "ap2Name": "Shape 4",
-          "ap1ID": "id-756",
-          "ap2ID": "id-761"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-757",
-          "ap2ID": "id-765"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-758",
-          "ap2ID": "id-759"
-        },
-        {
-          "ap2Name": "geometry1",
-          "ap1ID": "id-759",
-          "ap2ID": "id-760"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-760",
-          "ap2ID": "id-762"
-        },
-        {
-          "ap2Name": "geometry2",
-          "ap1ID": "id-761",
-          "ap2ID": "id-760"
-        },
-        {
-          "ap2Name": "Shape 7",
-          "ap1ID": "id-762",
-          "ap2ID": "id-757"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-762",
-          "ap2ID": "id-763"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-763",
-          "ap2ID": "id-764"
-        },
-        {
-          "ap2Name": "Shape 8",
-          "ap1ID": "id-764",
-          "ap2ID": "id-757"
-        },
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-765",
-          "ap2ID": "id-736"
-        },
-        {
-          "ap2Name": "Item Name",
-          "ap1ID": "id-766",
-          "ap2ID": "id-765"
-        },
-        {
-          "ap2Name": "Cost (USD)",
-          "ap1ID": "id-767",
-          "ap2ID": "id-765"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-740",
-          "ap2ID": "id-751"
-        }
-      ],
-      "parentRepo": {
-        "privateRepo": false,
-        "repoName": "Drawer_Slide",
-        "dateCreated": "2026-04-27T03:46:20Z",
-        "readMe": "https://raw.githubusercontent.com/tristan-huber/Drawer_Slide/master/README.md?sanitize=true",
-        "yyyy": 2026,
-        "topMoleculeID": "id-755",
-        "githubMoleculesUsed": [
-          {
-            "owner": "alzatin",
-            "repoName": "-6-Wood-Screw-inches"
-          }
-        ],
-        "html_url": "https://github.com/tristan-huber/Drawer_Slide",
-        "topics": [
-          "furniture",
-          "hardware"
-        ],
-        "parentRepo": null,
-        "forks": 0,
-        "dateModified": "739733",
-        "ranking": 0,
-        "searchField": "drawer_slide tristan-huber typical drawer slide. screw placement is based on linked bom item. furniture hardware",
-        "owner": "tristan-huber",
-        "description": "Typical drawer slide. Screw placement is based on linked BOM item.",
-        "contentURL": "https://raw.githubusercontent.com/tristan-huber/Drawer_Slide/master/project.abundance?sanitize=true",
-        "svgURL": "https://raw.githubusercontent.com/tristan-huber/Drawer_Slide/master/project.svg?sanitize=true",
-        "isLocal": false
-      },
-      "unitsKey": "Inches",
-      "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Move",
-      "x": 0.6728515625,
-      "y": 0.19215155615696888,
-      "uniqueID": "id-883",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "xDist",
-          "ioValue": 0,
-          "currentEquation": "0"
-        },
-        {
-          "name": "yDist",
-          "ioValue": -9.25,
-          "currentEquation": "-0.5 * Width - 0.25"
-        },
-        {
-          "name": "zDist",
-          "ioValue": 0
-        }
-      ]
-    },
-    {
-      "atomType": "Move",
-      "x": 0.6673177083333334,
-      "y": 0.36400541271989173,
-      "uniqueID": "id-889",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "xDist",
-          "ioValue": 0
-        },
-        {
-          "name": "yDist",
-          "ioValue": 9.25,
-          "currentEquation": "0.5 * Width + 0.25"
-        },
-        {
-          "name": "zDist",
-          "ioValue": 0
-        }
-      ]
-    },
-    {
-      "atomType": "Assembly",
-      "x": 0.7532552083333334,
-      "y": 0.28416779431664413,
-      "uniqueID": "id-895",
-      "ioValues": [
-        {
-          "name": "Shape 1",
-          "ioValue": null
-        },
-        {
-          "name": "Shape 2",
-          "ioValue": null
-        },
-        {
-          "name": "Shape 3",
-          "ioValue": null
-        }
-      ]
-    },
-    {
-      "atomType": "ExtractTag",
-      "x": 0.798828125,
-      "y": 0.6779431664411367,
-      "uniqueID": "id-901",
-      "name": "Extract Tag",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ],
-      "tag": "plywood",
-      "tagIndex": 0
     }
   ],
   "allConnectors": [
@@ -1645,7 +661,7 @@
     {
       "ap2Name": "geometry",
       "ap1ID": "id-564",
-      "ap2ID": "id-732"
+      "ap2ID": "id-724"
     },
     {
       "ap2Name": "Shape 5",
@@ -1689,11 +705,6 @@
     },
     {
       "ap2Name": "geometry",
-      "ap1ID": "id-640",
-      "ap2ID": "id-637"
-    },
-    {
-      "ap2Name": "geometry",
       "ap1ID": "id-675",
       "ap2ID": "id-679"
     },
@@ -1728,39 +739,9 @@
       "ap2ID": "id-564"
     },
     {
-      "ap2Name": "Shape 1",
-      "ap1ID": "id-732",
-      "ap2ID": "id-895"
-    },
-    {
       "ap2Name": "geometry",
-      "ap1ID": "id-768",
-      "ap2ID": "id-883"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-768",
-      "ap2ID": "id-889"
-    },
-    {
-      "ap2Name": "Shape 2",
-      "ap1ID": "id-883",
-      "ap2ID": "id-895"
-    },
-    {
-      "ap2Name": "Shape 3",
-      "ap1ID": "id-889",
-      "ap2ID": "id-895"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-895",
-      "ap2ID": "id-901"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-901",
-      "ap2ID": "id-724"
+      "ap1ID": "id-640",
+      "ap2ID": "id-637"
     }
   ],
   "unitsKey": "Inches",

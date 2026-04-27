@@ -7,9 +7,9 @@
 ## Inputs
 
 - **Depth** (number)
-- **Height** (undefined)
-- **Width** (undefined)
-- **Thickness** (undefined)
+- **Height** (number)
+- **Width** (number)
+- **Thickness** (number)
 
 
 
