@@ -46,21 +46,21 @@
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.6603518267929634,
+      "y": 0.24615384615384617,
       "uniqueID": "id-501",
       "name": "Height"
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.2300405953991881,
+      "y": 0.3384615384615385,
       "uniqueID": "id-504",
       "name": "Width"
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.3274695534506089,
+      "y": 0.4307692307692308,
       "uniqueID": "id-510",
       "name": "Thickness"
     },
@@ -144,6 +144,10 @@
         },
         {
           "name": "Shape 8",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 9",
           "ioValue": null
         }
       ]
@@ -1482,16 +1486,18 @@
       "ioValues": [
         {
           "name": "base_width",
-          "ioValue": 10
+          "ioValue": 17.5,
+          "currentEquation": "Width - Thickness"
         },
         {
           "name": "base_depth",
-          "ioValue": 10
+          "ioValue": 23.5,
+          "currentEquation": "Depth - Thickness"
         },
         {
           "name": "base_thickness",
           "ioValue": 0.5,
-          "currentEquation": "0.5"
+          "currentEquation": "Thickness"
         }
       ],
       "topLevel": false,
@@ -1511,21 +1517,21 @@
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.5209742895805142,
+          "y": 0.15384615384615385,
           "uniqueID": "id-1718",
           "name": "base_width"
         },
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.43060268554179243,
+          "y": 0.24615384615384617,
           "uniqueID": "id-1721",
           "name": "base_depth"
         },
         {
           "atomType": "Input",
           "x": 0.025384615384615384,
-          "y": 0.2300405953991881,
+          "y": 0.3384615384615385,
           "uniqueID": "id-1724",
           "name": "base_thickness"
         },
@@ -1537,11 +1543,11 @@
           "ioValues": [
             {
               "name": "x length",
-              "ioValue": 10
+              "ioValue": 23.5
             },
             {
               "name": "y length",
-              "ioValue": 10
+              "ioValue": 17.5
             }
           ]
         },
@@ -1559,6 +1565,55 @@
               "name": "height",
               "ioValue": 0.5,
               "currentEquation": "base_thickness"
+            }
+          ]
+        },
+        {
+          "atomType": "Difference",
+          "x": 0.3255208333333333,
+          "y": 0.4912043301759134,
+          "uniqueID": "id-1769",
+          "ioValues": [
+            {
+              "name": "geometry1",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "geometry2",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.3942057291666667,
+          "y": 0.5223274695534507,
+          "uniqueID": "id-1773",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "height",
+              "ioValue": 0.25,
+              "currentEquation": "base_thickness / 2"
+            }
+          ]
+        },
+        {
+          "atomType": "Difference",
+          "x": 0.46158854166666663,
+          "y": 0.7713125845737483,
+          "uniqueID": "id-1777",
+          "ioValues": [
+            {
+              "name": "geometry1",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "geometry2",
+              "ioValue": "__GEOMETRY_INPUT__"
             }
           ]
         },
@@ -1669,55 +1724,6 @@
           },
           "unitsKey": "MM",
           "fileTypeVersion": 1
-        },
-        {
-          "atomType": "Difference",
-          "x": 0.3255208333333333,
-          "y": 0.4912043301759134,
-          "uniqueID": "id-1769",
-          "ioValues": [
-            {
-              "name": "geometry1",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "geometry2",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Extrude",
-          "x": 0.3942057291666667,
-          "y": 0.5223274695534507,
-          "uniqueID": "id-1773",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "height",
-              "ioValue": 0.25,
-              "currentEquation": "base_thickness / 2"
-            }
-          ]
-        },
-        {
-          "atomType": "Difference",
-          "x": 0.46158854166666663,
-          "y": 0.7713125845737483,
-          "uniqueID": "id-1777",
-          "ioValues": [
-            {
-              "name": "geometry1",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "geometry2",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
         }
       ],
       "allConnectors": [
@@ -1752,11 +1758,6 @@
           "ap2ID": "id-1777"
         },
         {
-          "ap2Name": "geometry2",
-          "ap1ID": "id-1757",
-          "ap2ID": "id-1769"
-        },
-        {
           "ap2Name": "geometry",
           "ap1ID": "id-1769",
           "ap2ID": "id-1773"
@@ -1770,6 +1771,11 @@
           "ap2Name": "number or geometry",
           "ap1ID": "id-1777",
           "ap2ID": "id-1671"
+        },
+        {
+          "ap2Name": "geometry2",
+          "ap1ID": "id-1757",
+          "ap2ID": "id-1769"
         }
       ],
       "fileTypeVersion": 1
@@ -1890,6 +1896,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-1165",
       "ap2ID": "id-889"
+    },
+    {
+      "ap2Name": "Shape 9",
+      "ap1ID": "id-1669",
+      "ap2ID": "id-564"
     }
   ],
   "unitsKey": "Inches",
