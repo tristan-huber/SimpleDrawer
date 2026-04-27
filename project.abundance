@@ -1112,7 +1112,7 @@
                 },
                 {
                   "name": "Shape 3",
-                  "ioValue": "__GEOMETRY_INPUT__"
+                  "ioValue": ""
                 }
               ],
               "closedSelection": 0
@@ -1575,11 +1575,11 @@
           "uniqueID": "id-1769",
           "ioValues": [
             {
-              "name": "retain",
+              "name": "geometry1",
               "ioValue": "__GEOMETRY_INPUT__"
             },
             {
-              "name": "remove",
+              "name": "geometry2",
               "ioValue": "__GEOMETRY_INPUT__"
             }
           ]
@@ -1608,11 +1608,11 @@
           "uniqueID": "id-1777",
           "ioValues": [
             {
-              "name": "retain",
+              "name": "geometry1",
               "ioValue": "__GEOMETRY_INPUT__"
             },
             {
-              "name": "remove",
+              "name": "geometry2",
               "ioValue": "__GEOMETRY_INPUT__"
             }
           ]
@@ -1748,14 +1748,34 @@
           "ap2ID": "id-1757"
         },
         {
+          "ap2Name": "geometry1",
+          "ap1ID": "id-1736",
+          "ap2ID": "id-1769"
+        },
+        {
+          "ap2Name": "geometry1",
+          "ap1ID": "id-1740",
+          "ap2ID": "id-1777"
+        },
+        {
           "ap2Name": "geometry",
           "ap1ID": "id-1769",
           "ap2ID": "id-1773"
         },
         {
+          "ap2Name": "geometry2",
+          "ap1ID": "id-1773",
+          "ap2ID": "id-1777"
+        },
+        {
           "ap2Name": "number or geometry",
           "ap1ID": "id-1777",
           "ap2ID": "id-1671"
+        },
+        {
+          "ap2Name": "geometry2",
+          "ap1ID": "id-1757",
+          "ap2ID": "id-1769"
         }
       ],
       "fileTypeVersion": 1
