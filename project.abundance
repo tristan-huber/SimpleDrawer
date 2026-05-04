@@ -7,15 +7,18 @@
   "ioValues": [
     {
       "name": "Depth",
-      "ioValue": 24
+      "ioValue": 24,
+      "currentEquation": "24"
     },
     {
       "name": "Height",
-      "ioValue": 2.5
+      "ioValue": 5.5,
+      "currentEquation": "5.5"
     },
     {
       "name": "Width",
-      "ioValue": 18
+      "ioValue": 18,
+      "currentEquation": "18"
     },
     {
       "name": "Thickness",
@@ -164,7 +167,7 @@
         },
         {
           "name": "height",
-          "ioValue": 2.5,
+          "ioValue": 5.5,
           "currentEquation": "Height"
         }
       ]
@@ -305,7 +308,7 @@
         },
         {
           "name": "height",
-          "ioValue": 2.5,
+          "ioValue": 5.5,
           "currentEquation": "Height"
         }
       ]
@@ -1571,6 +1574,55 @@
           ]
         },
         {
+          "atomType": "Difference",
+          "x": 0.35807291666666663,
+          "y": 0.5171428571428571,
+          "uniqueID": "id-2062",
+          "ioValues": [
+            {
+              "name": "retain",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "remove",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.5,
+          "y": 0.5,
+          "uniqueID": "id-2069",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "height",
+              "ioValue": 0.25,
+              "currentEquation": "base_thickness / 2"
+            }
+          ]
+        },
+        {
+          "atomType": "Difference",
+          "x": 0.5188802083333334,
+          "y": 0.8057142857142858,
+          "uniqueID": "id-2073",
+          "ioValues": [
+            {
+              "name": "retain",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "remove",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
           "atomType": "GitHubMolecule",
           "x": 0.2565104166666667,
           "y": 0.40571428571428575,
@@ -1678,55 +1730,6 @@
           "unitsKey": "MM",
           "fileTypeVersion": 1,
           "lastReloadedFromGithubAt": 1777913330844
-        },
-        {
-          "atomType": "Difference",
-          "x": 0.35807291666666663,
-          "y": 0.5171428571428571,
-          "uniqueID": "id-2062",
-          "ioValues": [
-            {
-              "name": "retain",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "remove",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Extrude",
-          "x": 0.5,
-          "y": 0.5,
-          "uniqueID": "id-2069",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "height",
-              "ioValue": 0.25,
-              "currentEquation": "base_thickness / 2"
-            }
-          ]
-        },
-        {
-          "atomType": "Difference",
-          "x": 0.5188802083333334,
-          "y": 0.8057142857142858,
-          "uniqueID": "id-2073",
-          "ioValues": [
-            {
-              "name": "retain",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "remove",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
         }
       ],
       "allConnectors": [
@@ -1751,11 +1754,6 @@
           "ap2ID": "id-2073"
         },
         {
-          "ap2Name": "remove",
-          "ap1ID": "id-2050",
-          "ap2ID": "id-2062"
-        },
-        {
           "ap2Name": "geometry",
           "ap1ID": "id-2062",
           "ap2ID": "id-2069"
@@ -1769,6 +1767,11 @@
           "ap2Name": "number or geometry",
           "ap1ID": "id-2073",
           "ap2ID": "id-1671"
+        },
+        {
+          "ap2Name": "remove",
+          "ap1ID": "id-2050",
+          "ap2ID": "id-2062"
         }
       ],
       "fileTypeVersion": 1
