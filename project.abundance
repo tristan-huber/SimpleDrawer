@@ -7,23 +7,19 @@
   "ioValues": [
     {
       "name": "Depth",
-      "ioValue": 13,
-      "currentEquation": "13"
+      "ioValue": 13
     },
     {
       "name": "Height",
-      "ioValue": 2.5,
-      "currentEquation": "2.5"
+      "ioValue": 2.5
     },
     {
       "name": "Width",
-      "ioValue": 20,
-      "currentEquation": "20"
+      "ioValue": 20
     },
     {
       "name": "Thickness",
-      "ioValue": 0.5,
-      "currentEquation": "0.5"
+      "ioValue": 0.5
     }
   ],
   "topLevel": true,
